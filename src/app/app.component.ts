@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+import {TestComponent} from "./test-component/test.component";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'latest-ng-ivy-boilerplate';
+  @ViewChild('testCmpCtrl', {static: true}) testCmpCtrl: TestComponent;
 }
